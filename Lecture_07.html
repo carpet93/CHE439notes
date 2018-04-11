@@ -1,0 +1,26 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Lecture 07</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="styles.css" type="text/css" />
+</head>
+<body><div class="main"><div class="tree">
+<p><strong>Index</strong></p>
+<p><a href="Lecture_01.html">Lecture 01</a></p>
+
+<p><a href="Lecture_02.html">Lecture 02</a></p>
+
+<p><a href="Lecture_03.html">Lecture 03</a></p>
+
+<p><a href="Lecture_04.html">Lecture 04</a></p>
+
+<p><a href="Lecture_05.html">Lecture 05</a></p>
+
+<p><a href="Lecture_06.html">Lecture 06</a></p>
+
+<p><a href="Lecture_07.html">Lecture 07</a></p>
+
+</div>
+<div class="page"><h1><b><u>Lecture 07</u></b></h1><h2>Sampling and Resolution</h2><br />• We can only gain resolution, if we sample for a long time<br />   ◇ A longer time leads to two signals which are similar diverging<br />• Resolution is determined at the later time point in the FID (Free induction decay: <a href="https://en.wikipedia.org/wiki/Free_induction_decay">Wikipedia</a>)<br />• We need multiple scans for our signal<br />   ◇ With one signal only, the noise would be too high<br />• Aquisition time plus relaxation delay = relaxation time<br />   ◇ The aquisition time is the time, where the signal decays<br />   ◇ The relaxation delay is a waiting till the next pulse<br />   ◇ In 2D or 3D the aquisition time becomes very short → most of the time is the delay time<br />• D1 (delaytime) is chosen to be that the system relaxes. Therefore you set it equal to T1.<br />   ◇ Reminder: after T1 you have 1/e of spins relaxed. In 2-3x T1 you have all relaxed<br />      ▪ T2 is only the dephasing<br />   ◇ If you dont wait enough time between pulses → Integral of the peaks are wrong<br /><br /><h2>Pulse-Lengths and Excitation Bandwidths</h2><br />• Hard pulse: very short pulse with max energy<br />   ◇ Therefore even at the ends of the spectrum the pulse is 90° or 180°<br />• Selective pulse: You can selectively excite or not excite certain ppm<br />   ◇ This is done for solvent suppression (ng sample in a lot of sample)<br />      ▪ You need to suppress the solvent peak to see your sample<br />   ◇ this yields a soft pulse: long duration, low power<br />• Soft pulses have a nice shape like gaussian, sin etc.<br />• Pulse lengths can be calibrated<br />   ◇ The angle is dependent on the length of the pulse length<br />   ◇ If the angle is 90°, the signal is max<br />   ◇ The function that describes the intensity of the signal is a sin function<br />      ▪ In this function the max is broad and therefore poorly recognizable<br />      ▪ Therefore you take 360° because the signal is at 0 again and devide this pulse length by 4<br />      ▪ 180° is a bad choice since the system is not in thermal equilibrium (it needs to relax back: mathematically the sin goes to negative at 180°)<br />   ◇ This is best done with proton pulses<br />      ▪ It is possible by C and N etc. pulses but it is more difficult<br />   ◇ C spectra are calibrated by redoing a proton NMR<br />      ▪ After a H peak we wait 1/2J (J for H-C coupling) and if after this time the carbon signal comes, you have 90° and therefore a signal of zero.<br />   ◇ Mostly, the value of the parameter set given is used<br /><br /><h2>Fourier Transform</h2><br />• If you have a periodic function (repeating function), then you can synthesize that function as a sum of sin and cos functions<br />• An NMR signal is a periodic function → A fourier transform is possible<br />   ◇ An NMR signal is not a single sin or cos funciton, as we have an overlay of many different frequencies that oscillate<br />      ▪ Every oscillation has a preiodicity<br />• We actually want to decompose the NMR signal into single sin and cos functions → individual frequencies → spectrum</div></div>
+</body></html>
