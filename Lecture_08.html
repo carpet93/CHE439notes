@@ -1,0 +1,28 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Lecture 08</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="styles.css" type="text/css" />
+</head>
+<body><div class="main"><div class="tree">
+<p><strong>Index</strong></p>
+<p><a href="Lecture_01.html">Lecture 01</a></p>
+
+<p><a href="Lecture_02.html">Lecture 02</a></p>
+
+<p><a href="Lecture_03.html">Lecture 03</a></p>
+
+<p><a href="Lecture_04.html">Lecture 04</a></p>
+
+<p><a href="Lecture_05.html">Lecture 05</a></p>
+
+<p><a href="Lecture_06.html">Lecture 06</a></p>
+
+<p><a href="Lecture_07.html">Lecture 07</a></p>
+
+<p><a href="Lecture_08.html">Lecture 08</a></p>
+
+</div>
+<div class="page"><h1><b><u>Lecture 08</u></b></h1><h2>Gaussian Multiplication in </h2><sup>1</sup><h2>H Spectra</h2><br />• If we multiply the signal with a gauss, emphysizing the later part of the FID we gain resolution (compare last lecture)<br />   ◇ Needs to be gaussian and not exp to avoid blow up last point which will generate wiggles<br />   ◇ To generate a nice spectra, the FID needs to decay to zero<br />   ◇ This may generate negative components in the signal. This would be a problem if you integrate over the signal<br />• The integral is proportional to the very first data points. If the first data points are zero, there is 50/50 positive to negative signals (integral is 0)<br />• We can adjust how steep the function decays and where the maximum is.<br />• LB is responsible for the decay, GB for the position of the gaussian bell maximum<br />• In 2D NMR the sin-bell function is used<br />   ◇ the sign bell is shifted such that the max is at the start of the FID (90°) and it is corrected, such that at the end of the FID the function is zero<br />      ▪ In Bruker this parameter is called ssb<br />• 2D spectra without window functions look very weird as they have not decayed to zero<br /><br /><h2>Baseline Correction</h2><br />• If there is a very strong signal you get bathtub shaped baseline correction<br />   ◇ If it looks like a saddle, the amplifier gain was too high → measure again<br />• The bathtub can be subtracted from a helper function<br />• If the baseline is not corrected, the integrals would be wrong<br />• A sigmoidal-shaped baseline is an often occuring problem, because we have a background signal from the probehead. Some probeheads have some glues, which will be measured when using certain nuclei<br />   ◇ as it is solid, it gets very broad lines → sigmoidal shape<br />• If you see a lot of positive and negative spikes, the receiver gain is too large<br />   ◇ If this is the case, the Analog to digital converter is overloaded (it can handle signals up to 2<sup>16</sup>)<br />      ▪ Everything higher than this will be viewed as 2<sup>16</sup><br />      ▪ This will lead to wiggles<br /><h2>Linear Prediction</h2><br />• If the FID is cut (like in 2D) you can predict the following datapoints (after cut)<br />   ◇ If you have measured 1000 points, you can predict another 1000<br />   ◇ Truncated signals give wiggles<br />   ◇ If you use a window function on a truncated function, you will get broad lines → Prediction is better<br />   ◇ In 1D there is no point, as i can just measure it<br />   ◇ In 2D it is a big help, as you can measure for half the time and predict the second half → it is very fast and yields better resolution<br />   ◇ For this to work it needs to recognize the signal. If the signal to noise is bad, this might not work<br />   ◇ In NOESY (weak signals) linear prediction is mostly turned off<br />• Linear prediction is very important when you have only a few datapoints<br />   ◇ Like in 3D NMR, you often have just 32 datapoints in one dimension and then you can enhance it to 64 which gives a big advantage<br /><br /><h1>Exchange Effect in Spectra<br /></h1>• Some molecules spontaniously isomerize<br />• We have:<br />   ◇ Bond vibrations (too fast for NMR)<br />   ◇ Bond rotations (too fast for NMR)<br />   ◇  Molecular rotations are on the scale of NMR frequencies (10<sup>9</sup>)<br />   ◇ Slower effects will lead to line broadening<br />• If we have a dimethyl-formamide we have two inequivalent CH<sub>3</sub><br />   ◇ They are chemically inequivalent, but as the amide bond has partial double-bond character → rotation is slowed down<br />   ◇ If we heat the sample, the two signals will get broader, melt together and upon further heating become sharp again, but only one peak<br />      ▪ This corresponds to slow, medium and fast exchange<br />      ▪ In fast exchange you lose signals or get very broad signals<br />      ▪ In slow exchange you have seperated signals<br />• Slow exchange: rate for exchange is smaller than difference of chemical shift<br />   ◇ Same thing is true for the coupling differences and the difference of the inverse of transverse relaxation<br />• Coalescence point: point where we go from slow to fast exchange<br />• After coalescence the signal moves to the average position between the signals (dependent on how strong the signals are)</div></div>
+</body></html>
