@@ -1,0 +1,32 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Lecture 10</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="styles.css" type="text/css" />
+</head>
+<body><div class="main"><div class="tree">
+<p><strong>Index</strong></p>
+<p><a href="Lecture_01.html">Lecture 01</a></p>
+
+<p><a href="Lecture_02.html">Lecture 02</a></p>
+
+<p><a href="Lecture_03.html">Lecture 03</a></p>
+
+<p><a href="Lecture_04.html">Lecture 04</a></p>
+
+<p><a href="Lecture_05.html">Lecture 05</a></p>
+
+<p><a href="Lecture_06.html">Lecture 06</a></p>
+
+<p><a href="Lecture_07.html">Lecture 07</a></p>
+
+<p><a href="Lecture_08.html">Lecture 08</a></p>
+
+<p><a href="Lecture_09.html">Lecture 09</a></p>
+
+<p><a href="Lecture_10.html">Lecture 10</a></p>
+
+</div>
+<div class="page"><h1><b><u>Lecture 10</u></b></h1><h2>T1 Relaxation</h2><br />• A pulse has no effect because the B0 field is much stronger than the pulse<br />• If we are in a rotating frame, which is matched to B0, the field is static and there is no more Field<br />• The dipolar field form another spin makes the pulse<br />• The dipolar field needs to be synchronized to B0 (dipolar field rotates in xy-plane) to have an effect<br />• The B1 field needs to rotate in the xy-plane such that there is no field in z<br />• The dipolar field is like a pulse, but it uses the dipole moment of a molecule<br />• T1 relaxation is movement dependent (movement of the molecule)<br />   ◇ At 0K there is no T1<br />• The dipolar field is used to switch the spin from alpha to beta state<br />• In single-quantum transitions, one spin goes from alpha to beta or vice versa<br />• in zero-quantum transitions, one goes from alpha to beta and another goes from beta to alpha<br />• in double-quantum transitions, two go from alpha to beta or vice versa<br />   ◇ Zero-quantum transitions are a subtraction, double-quantum transitions are additions<br />• T1 relaxation efficiency is dependent on the frequency in which how much of the spins rotate<br />   ◇ single and zero-quantum are in the GigaHertz range<br />   ◇ double-quantum transitions are in KiloHertz range<br />• T1 relaxation does not occur spontaneously, it needs a trigger (the dipolar field) <span style="color:#ff0005;">important</span><br />• The spin flips is dependent on NMR-frequency, zero-/single- or double-quantum frequency as the frequency must match B1 such that we have a rotating frame<br />• The fractio of molecules that rotate with this frequency is important for the signal<br /><br /><h2>T2 Relaxation</h2><br />• alpha to beta spin flips reduce the lifetime of the states and lead to lifetime broading<br />   ◇ In large molecules (proteins) T1 (1s) is long but T2 is short (20ms)<br />   ◇ Short T2 leads to broad lines<br />   ◇ In small molecules T1 and T2 are on the same timescale<br />• For T2, additional fields in the z-direction change the precession frequencies and thereby lead to line-broadening<br />• Since not all the spins in every molecule is the same, a 180° pulse will not affect all spins<br />   ◇ We can do these pulses and they will run out of phase<br />   ◇ First, the spins are all aligned to the x-axis and would run the same<br />• The field in the z-axis is either in the same orientation of B0 (then the effect is additive) or in the opposite direction (the the effect is subtractive)<br />   ◇ If the molecule is rotating this effect is averaged out<br />   ◇ For this effect to be relevant, the fraction of molecules that dont rotate are important<br /><br /><h2>Correlation Function</h2><br />• It tells you how a state at a time t+i is related to the state at time t<br />   ◇ If it is the same, the molecule doesnt tumble<br />• In slow reorientation, the vector product is non-zero (compare to slide, all x positive)<br />• In faster reorientation, the vector product can be zero<br />   ◇ A large change in time will lead to a function value of 0<br />   ◇ A small change will give a function value close to 1<br />• The correlation functino decays much more rapidely if the fluctuations are faster<br />   ◇ The function tells us, how long it takes on average until a spin changes its state<br />   ◇ In NMR we are interested in the frequency of the change<br />   ◇ For this the correlation function is fourier transformed to yield the spectral density (function of fraction of molecules rotating at defined frequency)<br />• A small molecule has a fast decaying autocorrelation function<br />• Molecules that have hit another molecule do not rotate or do rotate slowly<br />   ◇ Other molecules that have not just hit another molecule rotate faster<br />• A large molecule (protein) can not tumble as fast as a small molecule (due to mass)<br />• T1 relaxation has a minimum at medium sized molecules<br />   ◇ T2 becomes lower and lower<br />• T2 goes down all the time because if you increase the amount of molecules tumbling slowly, you increase “the second effect” (the one where the dipole moment adds up or is substracted from the B0 field)<br />• T2 is measured using Spin Echo<br />   ◇ After some time the spins have a bit dephased<br />   ◇ We flip 180° and wait for the same amount of time → spins will go into phase coaherence again<br /><br />• Using Inversion Recovery we can measure T1<br />   ◇ First we make a 180° flip<br />   ◇ Since we cant see z-axis spins, we wait some time and do a 90° flip to x axis and then we know if it is negative or positive<br />• Relaxation times dependent motion<br />   ◇ T1 and T2 depend on motion differently<br /><br /><h2>Lipari-Szabo</h2><br />• Describe motions in general<br />• This approach get rid of overall tumbling<br />   ◇ It is non-interesting because it is related to molecular size<br />   ◇ The internal motion of a molecule (rigid vs. flexible) is interesting<br />• The order parameter S<sup>2</sup>:<br />   ◇ if it is 1 there is no internal motion, only overall tumbling<br />   ◇ if it is 0 internal motion which is uncorrelatedly (moves fast)<br />• We go into a frame synchronized to overall tumbling<br />• Internal motion is at least an order of magnitude faster than overall tumbling<br />• Example: NPY</div></div>
+</body></html>
